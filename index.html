@@ -1,0 +1,98 @@
+  <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>home • zarwin.is-a.dev</title>
+    
+        <meta property="og:site_name" content="zarwin.is-a.dev"/>
+        <meta property="og:locale" content="en_US"/>
+        <meta property="og:title" content="home • zarwin.is-a.dev"/>
+        <meta property="og:type" content="website"/>
+    
+        <style>
+            .font-cabin {
+                font-family: 'Cabin', sans-serif;
+            }
+    
+            .font-inter {
+                font-family: 'Inter', sans-serif;
+            }
+        </style>
+        
+        
+        <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cabin&family=Inter&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    </head>
+    <body class="bg-black text-white font-cabin">
+        <div class="z-10 w-screen fixed top-0 p-2 sm:px-8">
+            <div class="flex-row-reverse flex uppercase">
+                <a href="https://zarwin.github.io/instaform/" target="_blank" class="p-2 inline-block my-auto cursor-pointer">
+                    contact
+                </a>
+                <a href="https://discord.gg/ZPTqes5tKe" target="_blank" class="p-2 inline-block my-auto cursor-pointer">
+                    discord
+                </a>
+                <a href="https://github.com/zarwin/" target="_blank" class="p-2 inline-block my-auto cursor-pointer">
+                    github
+                </a>
+                <a class="transform rotate-90 p-2 mr-4 inline-block my-auto">
+                    <i class="animate-bounce fas fa-arrow-up text-xl"></i>
+                </a>
+            </div>
+        </div>
+    
+        <div class="z-10 bottom-0 fixed">
+            <div class="m-4">
+                <p class="mb-1">Background artwork available here</p>
+                <a class="cursor-pointer" target="_blank" href="https://www.pixiv.net/en/artworks/89110974">
+                    <img class="inline-block h-10 mr-2" src="https://i.imgur.com/d8tpTy6.png">
+                </a>
+                <div class="inline-block h-10">
+                    <img class="inline-block w-10 rounded-full" src="https://i.imgur.com/rKuvWrp.png">
+                    <a class="cursor-pointer" target="_blank" href="https://www.pixiv.net/en/users/36082516">
+                        <p class="ml-1 inline-block align-middle">arttssam</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="font-inter w-screen h-full">
+            <div id="background" class="w-full h-screen bg-cover bg-bottom top-0 fixed" style="background-image: url(https://i.imgur.com/cCITu0D.jpg);"></div>
+            <div class="relative flex h-screen">
+                <div class="m-auto">
+                    <div class="-mx-48 sm:mx-0 h-32 transform scale-50 sm:scale-100 md:scale-150">
+                        <div class="inline-block z-10 relative">
+                            <div class="h-32 w-32 inline-block rounded-full">
+                                <div id="loader" class="bg-black m-auto h-32 w-32 p-8 fixed text-6xl">
+                                    <i class="animate-spin fas fa-spinner"></i>
+                                </div>
+                                <img class="h-full inline-block rounded-full" src="https://i.imgur.com/SngRyfJ.png">
+                            </div>
+                        </div>
+                        <div class="inline-block align-middle -ml-16 font-cabin text-6xl h-full rounded-r-full pl-16" style="background: rgba(0, 0, 0, 0.692);">
+                            <p class="m-8 ml-4">
+                                <span class="block -my-6">zarwin</span>
+                                <span class="ml-5 text-sm"> paranoid programmer</span><!-- <span class="ml-8 text-sm">creator</span> -->
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            const background = document.querySelector("#background");
+            const loader = document.querySelector("#loader");
+    
+            let source = background.style.backgroundImage;
+            background.style.backgroundImage = "";
+    
+            window.addEventListener("load", () => {
+                background.style.backgroundImage = source;
+                loader.remove();
+            });
+        </script>
+        <!-- Analytics -->
+        <script>if(!sessionStorage.getItem("_swa")&&document.referrer.indexOf(location.protocol+"//"+location.host)!== 0){fetch("https://counter.dev/track?"+new URLSearchParams({referrer:document.referrer,screen:screen.width+"x"+screen.height,user:"pythondev",utcoffset:"6"}))};sessionStorage.setItem("_swa","1");</script>
+    </body>
+    </html>
